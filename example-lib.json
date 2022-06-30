@@ -1,0 +1,73 @@
+{
+  "library": {
+    "annotation": [
+      {
+        "translatorOptions": "",
+        "type": "CqlToElmInfo"
+      }
+    ],
+    "identifier": {
+      "id": "example"
+    },
+    "schemaIdentifier": {
+      "id": "urn:hl7-org:elm",
+      "version": "r1"
+    },
+    "usings": {
+      "def": [
+        {
+          "localIdentifier": "System",
+          "uri": "urn:hl7-org:elm-types:r1"
+        },
+        {
+          "localIdentifier": "FHIR",
+          "uri": "http://hl7.org/fhir",
+          "version": "4.0.1"
+        }
+      ]
+    },
+    "contexts": {
+      "def": [
+        {
+          "name": "Patient"
+        }
+      ]
+    },
+    "statements": {
+      "def": [
+        {
+          "name": "Patient",
+          "context": "Patient",
+          "expression": {
+            "type": "SingletonFrom",
+            "operand": {
+              "dataType": "{http://hl7.org/fhir}Patient",
+              "templateId": "http://hl7.org/fhir/StructureDefinition/Patient",
+              "type": "Retrieve"
+            }
+          }
+        },
+        {
+          "name": "ProcedureRetrieve",
+          "context": "Patient",
+          "accessLevel": "Public",
+          "expression": {
+            "dataType": "{http://hl7.org/fhir}Procedure",
+            "templateId": "http://hl7.org/fhir/StructureDefinition/Procedure",
+            "type": "Retrieve"
+          }
+        },
+        {
+          "name": "EncounterRetrieve",
+          "context": "Patient",
+          "accessLevel": "Public",
+          "expression": {
+            "dataType": "{http://hl7.org/fhir}Encounter",
+            "templateId": "http://hl7.org/fhir/StructureDefinition/Encounter",
+            "type": "Retrieve"
+          }
+        }
+      ]
+    }
+  }
+}

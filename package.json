@@ -1,0 +1,16 @@
+{
+  "name": "async-ps-proof",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "mgramigna",
+  "license": "ISC",
+  "dependencies": {
+    "cql-exec-fhir": "git+https://github.com/projecttacoma/cql-exec-fhir.git",
+    "cql-execution": "git+https://github.com/projecttacoma/cql-execution.git#async-implementation"
+  }
+}
